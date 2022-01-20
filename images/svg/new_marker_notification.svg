@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#AE3232;}
+	.st1{fill:#FFFFFF;font-family:'OpenSans';font-size:10px;}
+</style>
+<polygon class="st0" points="29.9,11.1 26.5,9.3 25.7,8.9 25.7,8 25.9,4.2 22.1,4.4 21.2,4.4 20.8,3.6 19,0.2 15.8,2.3 15.1,2.8 14.3,2.3 11.1,0.2 9.3,3.6 8.9,4.4 8,4.4 4.2,4.2 4.4,8 4.4,8.9 3.6,9.3 0.2,11.1 2.3,14.3 2.8,15 2.3,15.8 0.2,19 3.6,20.7 4.4,21.2 4.4,22.1 4.2,25.9 8.9,25.6 9.3,26.4 11.1,29.8 14.3,27.8 15.1,27.3 15.8,27.8 19,29.8 20.8,26.4 21.2,25.6 22.1,25.7 25.9,25.9 25.7,22.1 25.7,21.2 26.5,20.7 29.9,19 27.8,15.8 27.3,15 27.8,14.3 "/>
+<text transform="matrix(1 0 0 1 5.3125 17.6875)" class="st1">New</text>
+</svg>

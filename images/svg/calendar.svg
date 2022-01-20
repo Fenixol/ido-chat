@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Calendar_availability_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">.svg_color{fill:#c55f55;}</style>
+<path class="svg_color" d="M22.9,1H18c0-1-0.4-1-1-1c-0.6,0-1,0-1,1H8c0-1-0.4-1-1-1C6.4,0,6,0,6,1H1.1C0.5,1,0,1.5,0,2.2v20.8C0,23.5,0.5,24,1.1,24h21.8c0.6,0,1.1-0.5,1.1-1.1V2.2C24,1.5,23.5,1,22.9,1z M22,22H2V8h20V22z M22,7H2V3h4v1c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1V3h8v1c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1V3h4V7z M8,10H4v4h4V10z M7,13H5v-2h2V13z M14,10h-4v4h4V10z M13,13h-2v-2h2V13z M20,10h-4v4h4V10z M19,13h-2v-2h2V13z M8,16H4v4h4V16z M7,19H5v-2h2V19z M14,16h-4v4h4V16z M13,19h-2v-2h2V19z M20,16h-4v4h4V16z M19,19h-2v-2h2V19z"/>
+</svg>

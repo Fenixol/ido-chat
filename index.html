@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://kb.idoweddings.com/admin/dashboard/index -->
+<html lang="en-US" class="k-webkit k-webkit97"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="jJ6LasZrWxg2mq0CHhUk_j-c57JeDhMHsUdQS74rKN7v2eVasAptR273gE1aRWuycMyr0ypERir-Dz4hzFNQhg==">
+	<title></title>
+	<link href="css/jquery-ui.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/main1.css" rel="stylesheet">
+<link href="css/emoji.css" rel="stylesheet">
+<link href="css/ch-main.css" rel="stylesheet">
+<link href="css/ch-flexgrid.css" rel="stylesheet">
+<link href="css/jquery.fancybox.min.css" rel="stylesheet">
+<link href="css/easyui.css" rel="stylesheet">
+<link href="css/chosen.css" rel="stylesheet">
+<link href="css/dev.css" rel="stylesheet">
+<link href="css/jquery.formstyler.css" rel="stylesheet">
+<link href="css/dashboard-settings.css" rel="stylesheet">
+<link href="css/add-multiple-items.css" rel="stylesheet">
+<link href="css/newadmin.css" rel="stylesheet">
+<link href="css/kendo.common-material.min.css" rel="stylesheet">
+<link href="css/kendo.default.mobile.min.css" rel="stylesheet">
+<link href="css/kendo.material.min.css" rel="stylesheet">
+<script>	var dashboardSectionsSaveGroupedByPositionUrl = '/admin/dashboard/sections-save-grouped-by-position';
+	var dashboardSectionsSaveDisplayedUrl = '/admin/dashboard/sections-save-displayed';
+	function dashboardSettingsResetOnSuccessCallback() {
+		$('#modal').modal('hide');
+	}</script><style type="text/css">
+.vue-modal-resizer {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  background: transparent;
+  cursor: se-resize;
+}
+.vue-modal-resizer::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+}
+.vue-modal-resizer.clicked::after {
+  border-bottom: 10px solid #369be9;
+}
+</style><style type="text/css">
+.v--modal-block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+.v--modal-overlay {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  opacity: 1;
+}
+.v--modal-overlay.scrollable {
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.v--modal-overlay .v--modal-background-click {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+.v--modal-overlay .v--modal-box {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.v--modal-overlay.scrollable .v--modal-box {
+  margin-bottom: 2px;
+}
+.v--modal {
+  background-color: white;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+  padding: 0;
+}
+.v--modal.v--modal-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+.v--modal-top-right {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.overlay-fade-enter-active,
+.overlay-fade-leave-active {
+  transition: all 0.2s;
+}
+.overlay-fade-enter,
+.overlay-fade-leave-active {
+  opacity: 0;
+}
+.nice-modal-fade-enter-active,
+.nice-modal-fade-leave-active {
+  transition: all 0.4s;
+}
+.nice-modal-fade-enter,
+.nice-modal-fade-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style><style type="text/css">
+.vue-dialog div {
+  box-sizing: border-box;
+}
+.vue-dialog .dialog-flex {
+  width: 100%;
+  height: 100%;
+}
+.vue-dialog .dialog-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+}
+.vue-dialog .dialog-c-title {
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.vue-dialog .dialog-c-text {
+}
+.vue-dialog .vue-dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.vue-dialog .vue-dialog-buttons-none {
+  width: 100%;
+  padding-bottom: 15px;
+}
+.vue-dialog-button {
+  font-size: 12px !important;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.vue-dialog-button:hover {
+  background: rgba(0, 0, 0, 0.01);
+}
+.vue-dialog-button:active {
+  background: rgba(0, 0, 0, 0.025);
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 1px solid #eee;
+}
+</style></head>
+<body>
+
+<div id="preloader" style="display: none;">
+	<div>
+		<svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 90 90" version="1.1">
+			<g class="heart-loader__group">
+				<path class="heart-loader__square" stroke-width="1" fill="none" d="M0,30 0,90 60,90 60,30z"></path>
+				<path class="heart-loader__circle m--left" stroke-width="1" fill="none" d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0"></path>
+				<path class="heart-loader__circle m--right" stroke-width="1" fill="none" d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0"></path>
+				<path class="heart-loader__heartPath" stroke-width="2" d="M60,30 a30,30 0 0,1 0,60 L0,90 0,30 a30,30 0 0,1 60,0"></path>
+			</g>
+		</svg>
+	</div>
+	
+	<!-- <img src="../../web/images/preloader.gif" /> -->
+</div>
+<div id="snackbar"></div>
+<div class="dynamic-modal">
+	
+<div id="modal" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+</div>
+<div class="modal-body">
+
+	<div class="loading" style="display: none;">Loading...</div>
+
+	<div class="ajax-content" style="display: none;"></div>
+
+	<div class="error" style="display: none;">
+
+		<div class="pseudo_head">
+			<h4 class="modal-title">Error Loading</h4>
+		</div>
+
+		<div id="w4" class="alert-danger alert fade in">
+
+
+
+
+</div>
+	</div>
+
+	<div class="confirm" style="display: none;">
+
+		<div class="pseudo_head">
+			<h2 class="modal-title">Confirm</h2>
+		</div>
+
+		<div class="confirm-message modal_text">Are you sure?</div>
+
+		<form id="w5" class="confirm-form" action="https://kb.idoweddings.com/admin/dashboard/index" method="post">
+<input type="hidden" name="_csrf" value="jJ6LasZrWxg2mq0CHhUk_j-c57JeDhMHsUdQS74rKN7v2eVasAptR273gE1aRWuycMyr0ypERir-Dz4hzFNQhg==">
+		<div class="pseudo_foo">
+			<button type="submit" class="btn btn-primary btn-danger">Submit</button>			<button type="button" class="btn btn-default btn-cancel">Cancel</button>		</div>
+
+		</form>
+	</div>
+
+	
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="mysidenav" class="sidenav" style="width: 219px; display: block;">
+	<div>
+		<a href="javascript:void(0)" class="closebtn close-nav-bnt" onclick="closeNav()">×</a>
+
+					<a href="https://kb.idoweddings.com/admin/dashboard/index"><i class="ido-icon-dashboard"></i>Dashboard</a>
+		
+				<a href="https://kb.idoweddings.com/admin/calendar/index"><i class="ido-icon-availability-calendar"></i>Calendar</a>
+
+					<a href="https://kb.idoweddings.com/admin/conversation"><i class="ido-icon-conversations"></i>Conversations</a>
+		
+					<a href="https://kb.idoweddings.com/admin/event/index"><i class="ido-icon-event"></i>Weddings &amp; Events</a>
+		
+					<a href="https://kb.idoweddings.com/admin/inquiry/index"><i class="ido-icon-initial-inquiry"></i>Initial Inquiries</a>
+		
+				
+					<a href="https://kb.idoweddings.com/admin/customer/index"><i class="ido-icon-customer"></i>Customers</a>
+		
+					<a href="https://kb.idoweddings.com/admin/venue/index"><i class="ido-icon-venue"></i>Venues</a>
+		
+		                            <a href="https://kb.idoweddings.com/admin/vendors">
+                    <i class="ido-icon-vendor"></i>Vendors
+                </a>
+            		
+					<a href="https://kb.idoweddings.com/admin/agency/index"><i class="ido-icon-agency"></i>Agencies</a>
+		
+							<a href="https://kb.idoweddings.com/admin/wedding-items/1"><i class="ido-icon-wedding-items"></i>Wedding items</a>
+		
+							<a href="https://kb.idoweddings.com/admin/wedding-packages/1"><i class="ido-icon-wedding-packages"></i>Wedding packages</a>
+		
+				
+				
+				
+
+						
+					<a href="https://kb.idoweddings.com/admin/wedding-service/index"><i class="ido-icon-wedding_service"></i>Wedding services</a>
+		
+					<a href="https://kb.idoweddings.com/admin/template/index"><i class="ido-icon-templates"></i>Templates</a>
+		
+				
+					<a href="https://kb.idoweddings.com/admin/mastertable/index"><i class="ido-icon-mastertable"></i>Mastertable</a>
+		
+					<li><a href="https://kb.idoweddings.com/admin/email-management#main"><i class="ido-icon-e-mail-management"></i>E-mail management</a></li>
+		
+					<a href="https://kb.idoweddings.com/admin/knowledgebase/index"><i class="ido-icon-knowledge-base"></i>Knowledge Base</a>
+			</div>
+
+			<div class="logo-image-left-menu"><img src="img/symbol_bottom.svg" width="100%" height="100%"></div>
+		<div class="logo-image-left-menu-small"></div>
+	
+	<div class="copyright-div">©2019</div>
+
+</div>
+<script>
+	function openNav() {
+		$("#mysidenav").css({"width":"219", "display":"block"});
+		$("#Mymain").css("margin-left","219px");
+		$("#btn-three-lines").css("display","none");
+	}
+	function closeNav() {
+		$("#mysidenav").css({"width":"0", "display":"none"});
+		$("#Mymain").css("margin-left","0px");
+		$("#btn-three-lines").css("display","inline-block");
+	}
+</script>
+<div class="main_wrapper" id="Mymain" style="margin-left: 219px;">
+	<header>
+		<div class="header">
+			<ul class="left-side-header">
+				<li id="btn-three-lines" style="display: none;"><a class="main-sidebar open-nav-bnt" onclick="openNav()">☰</a></li>
+									<li><div class="filter_btn"><div></div></div></li>
+								
+				<li><a class="logo_btn"><div></div></a></li>
+				<li><a class="adm-main-title">W.O.M.I.1 <div>Admin Area</div></a></li>
+				<li>
+										<div class="section_block">
+												<span id="subtitle"></span>
+					</div>
+				</li>
+			</ul>
+			<ul class="right-side-header">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="https://kb.idoweddings.com/admin/dashboard/index#" title="User"><div class="right-btns user-btn"></div></a>
+					<ul class="dropdown-menu ls_header">
+						<li>admin</li>
+						<li><p>Super Administrator</p></li>
+						<li><div class="personal_logo" style="background:url(&#39;/uploads/uploader_files/1/PAtti.jpg&#39;) no-repeat center center; background-size: contain; height:160px; width: 160px;"></div></li>
+						<li><a href="https://kb.idoweddings.com/admin/my-profile">My profile</a></li>
+						<li><a href="https://kb.idoweddings.com/logout" data-method="post">Logout</a></li>
+					</ul>
+				</li>		
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="https://kb.idoweddings.com/admin/dashboard/index#" title="Organization"><div class="right-btns company-btn"></div></a>
+					<ul class="dropdown-menu ls_header">
+						<li>Weddings on the Move</li>
+						<!--li><p>Member since November 2016</p></li-->
+						<li><div class="company_logo" style="background:url(&#39;/uploads/uploader_files/1/WoMe_logo_small.png&#39;) no-repeat center center; background-size: contain; height:160px; width: 160px;"><!-- <img src="https://kb.idoweddings.com/uploads/uploader_files/WoMe_logo_small.png"> --></div></li>
+						<li><a href="https://kb.idoweddings.com/admin/company-profile">Company profile</a></li>
+
+																			<li><a href="https://kb.idoweddings.com/admin/dashboard/index#">Accounting</a></li>
+																									<li><a href="https://kb.idoweddings.com/admin/event/proposals">Proposals</a></li>
+																			<li><a href="https://kb.idoweddings.com/admin/dashboard/index#">Payments</a></li>
+																			<li><a href="https://kb.idoweddings.com/admin/dashboard/index#">Reports</a></li>
+												
+													<li><a href="https://kb.idoweddings.com/admin/organization-setting/index">Settings</a></li>
+																									<li><a href="https://kb.idoweddings.com/admin/user-manager/index">User Manager</a></li>
+																									<li><a href="https://kb.idoweddings.com/admin/tool/venue-website-tools">Tools</a></li>
+											</ul>
+				</li>				
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="https://kb.idoweddings.com/admin/dashboard/index#" title="Support"><div class="right-btns faq-btn"></div></a>
+					<ul class="dropdown-menu ls_header">
+						<li style="display: none"></li>
+													<li>
+								<a href="https://kb.idoweddings.com/admin/support/entry-list?KnowledgebaseEntrySearch%5Bknowledgebase_id%5D=36">Svetlana Test KB edited</a>							</li>
+													<li>
+								<a href="https://kb.idoweddings.com/admin/support/entry-list?KnowledgebaseEntrySearch%5Bknowledgebase_id%5D=47">Caribbean Destination Info</a>							</li>
+													<li>
+								<a href="https://kb.idoweddings.com/admin/support/entry-list?KnowledgebaseEntrySearch%5Bknowledgebase_id%5D=62">Support KB 1</a>							</li>
+													<li>
+								<a href="https://kb.idoweddings.com/admin/support/entry-list?KnowledgebaseEntrySearch%5Bknowledgebase_id%5D=67">Demo support KB</a>							</li>
+												<li><a href="https://kb.idoweddings.com/admin/support/index">All Knowledgebases</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="https://kb.idoweddings.com/admin/dashboard/index#" title="Notifications">
+						<div class="right-btns notify-btn"></div>
+																			<div class="count_new_notif" title="5 New Messages">
+								<img src="img/dashboard/marker_top.svg" width="20" height="20">							</div>
+											</a>
+					<ul class="dropdown-menu ls_header">
+						<li>Notifications</li>
+													<li>
+								<div class="notify_div new">
+																			<div class="new_notify"><img src="img/new_marker_notification.svg" width="30" height="30"></div>
+																		<div class="img_for_notify">
+																					<img src="img/inquiry_new.svg" width="36">
+																			</div>
+									<div class="text_notify">
+										<span>New inquiry</span>
+										<p>You have a new inquiry.</p>
+									</div>
+																			<div class="text-center">
+											<a href="https://kb.idoweddings.com/admin/inquiry/view?id=276" class="ido-link" style="text-transform: capitalize;">View inquiry</a>
+										</div>
+																	</div>
+							</li>
+													<li>
+								<div class="notify_div new">
+																			<div class="new_notify"><img src="img/new_marker_notification.svg" width="30" height="30"></div>
+																		<div class="img_for_notify">
+																					<img src="img/inquiry_new.svg" width="36">
+																			</div>
+									<div class="text_notify">
+										<span>New inquiry</span>
+										<p>You have a new inquiry.</p>
+									</div>
+																			<div class="text-center">
+											<a href="https://kb.idoweddings.com/admin/inquiry/view?id=275" class="ido-link" style="text-transform: capitalize;">View inquiry</a>
+										</div>
+																	</div>
+							</li>
+													<li>
+								<div class="notify_div new">
+																			<div class="new_notify"><img src="img/new_marker_notification.svg" width="30" height="30"></div>
+																		<div class="img_for_notify">
+																					<img src="img/inquiry_new.svg" width="36">
+																			</div>
+									<div class="text_notify">
+										<span>New inquiry</span>
+										<p>You have a new inquiry.</p>
+									</div>
+																			<div class="text-center">
+											<a href="https://kb.idoweddings.com/admin/inquiry/view?id=274" class="ido-link" style="text-transform: capitalize;">View inquiry</a>
+										</div>
+																	</div>
+							</li>
+												<li>
+							<div class="button_wrap">
+								<a href="https://kb.idoweddings.com/notification/index">
+									<button class="btn btn-danger" style="width: 100%; text-transform: uppercase;">See all notifications</button>
+								</a>
+							</div>
+							
+						</li>
+					</ul>
+				</li>
+									<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="https://kb.idoweddings.com/admin/dashboard/index#" title="Search"><div class="right-btns search-btn"></div></a>
+						<ul class="dropdown-menu ls_header">
+							<li>Search for</li>
+							<li>
+								<form id="w6" class="input-group top-search-form" action="https://kb.idoweddings.com/admin/top-search" method="get">
+									
+									<div class="search-f" style="border: 1px solid #ccc; width: 90%; margin: 0px auto; height: 30px; text-align: left; padding-left: 5px;">
+										<!-- <input type="text" placeholder="Search" style="width: 200px; border: none; outline: none; -webkit-appearance: none; padding-top: 4px;"/> -->
+										<div class="form-group field-search-s required">
+
+<input type="text" id="search-s" class="form-control" name="Search[s]" placeholder="Search" autocomplete="off" style="position: relative; width: 200px; left: -5px; border: none; outline: none; -webkit-appearance: none; height: 28px; display: block;" aria-required="true">
+
+<div class="help-block"></div>
+</div>										<input type="submit" value="" style="position: absolute; top: 3px; right: 20px; width: 23px; height: 23px; border: none; background: url(/images/svg/icon_input_search.svg) no-repeat center center;">
+									</div>
+
+								</form>
+								<div id="top-search-loading" class="text-center" style="display: none;">Loading...</div>
+								<div id="top-search-content" style="display: none; max-height: 43rem; overflow-y: auto;"></div>
+								<div id="top-search-error" style="display: none;">
+									<div id="w7" class="alert-danger alert fade in">
+
+
+
+
+</div>								</div>
+							</li>
+						</ul>
+					</li>
+							</ul>
+		</div>
+	</header>
+	<section id="base">
+		<div class="main_base">
+			<div class="container-fluid">
+				<div class="row">
+					<div id="main">
+					
+						<div class="adm-title">
+	<div class="col-md-12">
+		<div class="col-md-12 top_panel title_div_box clearfix">
+			<div class="create_obj">&nbsp;</div>
+			<div class="title_field"><h2>Dashboard</h2></div>
+			<div class="title_checkbox">
+				<a href="https://kb.idoweddings.com/admin/dashboard/settings" class="modal-ajax" data-modal-custom-class="big-modal" data-toggle="tooltip" title="" data-original-title="Dashboard settings">
+					<i class="ido-icon-settings pink-collor"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="adm-venue-content m-x-15 pt-15">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget-section header-panel ui-sortable" data-position="header">
+                                								<div class="adm-venue-user ido-panel ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" data-widget="user-greeting">
+    <div class="ido-panel-header ui-sortable-handle ui-widget-header ui-corner-all">
+        <div class="ido-btn-block">
+            <!--button type="button" class="btn btn-default ido-eddit-btn" data-toggle="tooltip" data-placement="right" title="Edit my profile">
+                <span class="ido-icon-edit pink-collor"></span>
+            </button-->
+            <a href="https://kb.idoweddings.com/admin/my-profile" class="btn btn-default ido-eddit-btn" data-toggle="tooltip" data-placement="right" title="" data-original-title="Edit my profile">
+                <span class="ido-icon-edit pink-collor"></span>
+            </a>
+        </div>
+        <div class="ido-btn-block">
+            <button type="button" class="btn btn-default ido-panel-btn remove-panel-btn" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hide section">X</button>
+        </div>
+    </div>
+    <div class="ido-panel-body">
+        <div class="media">
+            <div class="media-left">
+                <a href="https://kb.idoweddings.com/admin/dashboard/index#">
+                    <img class="media-object" src="img/thumb_1_PAtti.jpg" height="60" width="60" alt="...">
+                </a>
+            </div>
+            <div class="media-body m-l-30">
+                <h2 class="media-heading">Hi, Patti <span class="pl-20">Welcome to your Wedding Website Management Dashboard!</span></h2>
+                <dl>
+                    <dt>Today's agenda:</dt>
+                    <dd>
+                        <ul class="list-inline ido-user-list-badges">
+                            			                                    <li><div class="ido-user-badge"><i class="ido-icon-event"></i> <span>0 Weddings</span></div></li>
+			    			                                    <li><div class="ido-user-badge"><i class="ido-icon-initial-inquiry"></i> <span>87 Initial inquiries</span></div></li>
+			                                                            			                                    <li><div class="ido-user-badge"><i class="ido-icon-dashboard"></i> <span>0 Tasks</span></div></li>
+                                <li><div class="ido-user-badge"><i class="ido-icon-checklist-appointment"></i> <span>1 Appointments</span></div></li>
+			    			                                    <li><div class="ido-user-badge"><i class="ido-icon-conversations"></i> <span>25 New messages</span></div></li>
+			    			    				                                    <li><div class="ido-user-badge"><i class="ido-icon-payments-dues"></i> <span>5 Payments due</span></div></li>
+							                            </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+		            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mp-r-0 left-panel">
+            <div class="widget-section ui-sortable" data-position="left">
+                                								
+<div class="ido-panel new-initial-inquiries-section ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" data-widget="new-initial-inquiries">
+    <div class="ido-panel-header ui-sortable-handle ui-widget-header ui-corner-all">
+        <div class="ido-btn-block">
+        </div>
+        <h2>New initial inquiries</h2>
+        <div class="ido-btn-block">
+            <button type="button" class="btn btn-default ido-panel-btn remove-panel-btn" data-toggle="tooltip" title="" data-original-title="Hide section">X</button>
+        </div>
+    </div>
+    <div class="ido-panel-body">
+
+		    				    <div class="block-customer">
+						    <h4 class="heder-title">Customer</h4>
+						<ul class="list-inline">
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=273">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>First &amp; First</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    							<dt>Wedding date:</dt>
+							<dd><span class="not-set">(not set)</span></dd>
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/24/2021</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=271">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>First &amp; First</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    							<dt>Wedding date:</dt>
+							<dd><span class="not-set">(not set)</span></dd>
+						    						    <dt>Inquiry date:</dt>
+						    <dd>2/21/2021</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=266">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>First &amp; First</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    							<dt>Wedding date:</dt>
+							<dd><span class="not-set">(not set)</span></dd>
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/26/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=261">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>First &amp; First</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    							<dt>Wedding date:</dt>
+							<dd><span class="not-set">(not set)</span></dd>
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/24/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=260">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>First &amp; First</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    							<dt>Wedding date:</dt>
+							<dd><span class="not-set">(not set)</span></dd>
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/23/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=255">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>First &amp; First</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    							<dt>Wedding date:</dt>
+							<dd><span class="not-set">(not set)</span></dd>
+						    						    <dt>Inquiry date:</dt>
+						    <dd>7/15/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    			</ul>
+			<div class="footor-block">
+			    			    <a href="https://kb.idoweddings.com/admin/inquiry/index" class="ido-link">View all inquiries from Customers</a>
+			</div>
+		    </div>
+			    				    <div class="block-customer">
+						    <h4 class="heder-title">Venue</h4>
+						<ul class="list-inline">
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=272">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>my Inc.</h2>
+						<h4>Korea, North</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>9/2/2021</dd>
+						</dl>
+						<p class="text-center">weddingenterprises.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=268">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Test</h2>
+						<h4>Ukraine</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>12/16/2020</dd>
+						</dl>
+						<p class="text-center">weddingenterprises.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=267">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>9KEIAV8</h2>
+						<h4>Belize</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>12/10/2020</dd>
+						</dl>
+						<p class="text-center">weddingenterprises.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=263">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>venue</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/24/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=257">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Test-Sveta-venue-2</h2>
+						<h4>Ukraine</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>8/22/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    			</ul>
+			<div class="footor-block">
+			    			    <a href="https://kb.idoweddings.com/admin/inquiry/search-venue" class="ido-link">View all inquiries from Venues</a>
+			</div>
+		    </div>
+			    				    <div class="block-customer">
+						    <h4 class="heder-title">Vendor</h4>
+						<ul class="list-inline">
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=264">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>company name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/24/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=258">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Test-Sveta-vendor-3</h2>
+						<h4>Ukraine</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>8/22/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    			</ul>
+			<div class="footor-block">
+			    			    <a href="https://kb.idoweddings.com/admin/inquiry/search-vendor" class="ido-link">View all inquiries from Vendors</a>
+			</div>
+		    </div>
+			    				    <div class="block-customer">
+						    <h4 class="heder-title">Agency</h4>
+						<ul class="list-inline">
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=262">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>agency name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/24/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=256">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Test-Sveta-ta-1</h2>
+						<h4>Ukraine</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>8/22/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=251">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Agency name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>5/11/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    			</ul>
+			<div class="footor-block">
+			    			    <a href="https://kb.idoweddings.com/admin/inquiry/search-agency" class="ido-link">View all inquiries from Agencies</a>
+			</div>
+		    </div>
+			    				    <div class="block-customer">
+						    <h4 class="heder-title">Other</h4>
+						<ul class="list-inline">
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=265">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>company name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>11/24/2020</dd>
+						</dl>
+						<p class="text-center">dev.weddingsonthemove.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=254">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Company name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>5/11/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=253">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Company name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>5/11/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    				<li>
+				    				    <a href="https://kb.idoweddings.com/admin/inquiry/view?id=252">
+					<div class="ido-card">
+					    <div class="ido-card-header text-center">
+						<h2>Company name</h2>
+						<h4>United States</h4>
+					    </div>
+					    <div class="ido-card-body">
+						<dl class="ido-dl-horizontal">
+						    						    <dt>Inquiry date:</dt>
+						    <dd>5/11/2020</dd>
+						</dl>
+						<p class="text-center">kb.idoweddings.com</p>
+					    </div>
+					</div>
+				    </a>
+				</li>
+			    			</ul>
+			<div class="footor-block">
+			    			    <a href="https://kb.idoweddings.com/admin/inquiry/search-other" class="ido-link">View all inquiries from Others</a>
+			</div>
+		    </div>
+			    	        <!--div class="block-venue">
+            <h4 class="heder-title">venue</h4>
+            <ul class="list-inline">
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Venue  Name 1</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Venue  Name 2</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Venue  Name 3</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="footor-block">
+                <a href="#" class="ido-link">View all inquiries from Venues</a>
+            </div>
+        </div>
+        <div class="block-venue">
+            <h4 class="heder-title">Travel Agency</h4>
+            <ul class="list-inline">
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Agency  Name 1</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Agency  Name 2</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Agency  Name 3</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="footor-block">
+                <a href="#" class="ido-link">View all inquiries from Agencies</a>
+            </div>
+        </div>
+        <div class="block-venue">
+            <h4 class="heder-title">Vendor</h4>
+            <ul class="list-inline">
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Vendor  Name 1</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Vendor  Name 2</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Vendor  Name 3</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="footor-block">
+                <a href="#" class="ido-link">View all inquiries from Vendors</a>
+            </div>
+        </div>
+        <div class="block-venue">
+            <h4 class="heder-title">Other</h4>
+            <ul class="list-inline">
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Name 1</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Name 2</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ido-card">
+                        <div class="ido-card-header text-center">
+                            <h2>Name 3</h2>
+                            <h4>Country</h4>
+                        </div>
+                        <div class="ido-card-body">
+                            <dl class="ido-dl-horizontal">
+                                <dt>inquiry date:</dt>
+                                <dd>09/15/2019</dd>
+                            </dl>
+                            <p class="text-center">venuesite.idoweddings.com</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="footor-block">
+                <a href="#" class="ido-link">View all inquiries from Others</a>
+            </div>
+        </div-->
+
+    </div>
+
+</div>
+								<div class="ido-panel new-messages-block ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" data-widget="conversations">
+    <div class="ido-panel-header ui-sortable-handle ui-widget-header ui-corner-all">
+        <div class="ido-btn-block">
+            <a class="modal-ajax" href="https://kb.idoweddings.com/admin/dashboard/create-conversation" data-toggle="tooltip" data-original-title="Create conversation" data-placement="right"><i class="ido-icon-conversations"></i></a>        </div>
+        <h2>Conversations: New messages</h2>
+        <div class="ido-btn-block">
+            <button type="button" class="btn btn-default ido-panel-btn remove-panel-btn" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hide section">X</button>
+        </div>
+    </div>
+    <div class="ido-panel-body">
+        <ul class="list-inline">
+                    </ul>
+    </div>
+    <div class="ido-panel-futor">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="https://kb.idoweddings.com/admin/conversations#admin/" class="ido-link">View all conversations</a>
+            </div>
+        </div>
+    </div>
+</div>		            </div>
+        </div>
+        <div class="col-md-6 mp-l-0 right-panel">
+            <div class="widget-section ui-sortable" data-position="right">
+                								<div class="ido-panel appointments-tasks-block ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" data-widget="appointments-and-tasks">
+    <div class="ido-panel-header ui-sortable-handle ui-widget-header ui-corner-all">
+        <div class="ido-btn-block">
+            <a class="modal-ajax" href="https://kb.idoweddings.com/admin-event/task?mode=0&amp;is_template=0" data-modal-custom-class="big-modal" data-toggle="tooltip" data-original-title="Add task"><i class="ido-icon-checklist-task"></i></a>
+            <a class="modal-ajax" href="https://kb.idoweddings.com/admin/event/appointment?mode=0&amp;is_template=0" data-modal-custom-class="big-modal" data-toggle="tooltip" data-original-title="Add appointment"><i class="ido-icon-checklist-appointment"></i></a>                        </div>
+        <div>
+            <h2>Today’s appointments and tasks</h2>
+            <form action="https://kb.idoweddings.com/admin/dashboard/index">
+                <div class="checkbox">
+                    <input id="ido-checkbox" class="filter_assigned" name="assigned" value="1" type="checkbox">
+                    <label for="ido-checkbox">Assigned to me</label>
+                </div>
+            </form>
+        </div>
+        <div class="ido-btn-block">
+            <button type="button" class="btn btn-default ido-panel-btn remove-panel-btn" data-toggle="tooltip" title="" data-original-title="Hide section">X</button>
+        </div>
+    </div>
+    <div class="ido-panel-body">
+        <div id="w0" class="list-view"><div data-key="108"> </div></div><div id="w1" class="list-view"><div class="empty"></div></div><table class="table table-no-bordered">
+            <thead>
+            <tr>
+                <th>Completed</th>
+                <th>Event-Customer-Subject-Note</th>
+                <th class="appointments-tasks-customer">Assigned to</th>
+                <th class="appointments-tasks-time">Time</th>
+                <th class="appointments-tasks-location">Location</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+    <td>
+        <div class="checkbox">
+            <input id="ido-checkbox-2" type="checkbox">
+            <label for="ido-checkbox-2"></label>
+        </div>
+    </td>
+    <td colspan="4" class="el-appointments-tasks">
+        <div><table class="table table-no-bordered">
+                <tbody>
+                <tr>
+                    <td style="width:1%"></td>
+                    <td></td>
+                    <td class="appointments-tasks-customer">Customer</td>
+                    <td class="appointments-tasks-time">04:45 AM</td>
+                    <td class="appointments-tasks-location">my location</td>
+                </tr>
+                <tr>
+                    <td><i class="ido-icon-checklist-appointment"></i></td>
+                    <td>
+                                                    Rings:
+                                                 25 appointment<br>
+                        </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="4">Note: </td>
+                </tr>
+            </tbody></table></div>
+    </td>
+</tr>    
+                        </tbody>
+        </table>
+    </div>
+    <div class="ido-panel-futor">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="https://kb.idoweddings.com/admin/calendar/index" class="ido-link">View calendar</a>
+            </div>
+        </div>
+    </div>
+</div>
+								
+<div class="ido-panel block-payments-due ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" data-widget="payments-due">
+    <div class="ido-panel-header ui-sortable-handle ui-widget-header ui-corner-all">
+        <div class="ido-btn-block">
+        </div>
+        <h2>Payments Due</h2>
+        <div class="ido-btn-block">
+            <button type="button" class="btn btn-default ido-panel-btn remove-panel-btn" data-toggle="tooltip" title="" data-original-title="Hide section">X</button>
+        </div>
+    </div>
+    <div class="ido-panel-body">
+        <table class="table table-no-bordered text-center">
+            <thead>
+            <tr>
+                <th>Wedding</th>
+                <th>Customer</th>
+                <th>Invoice #</th>
+                <th>Amount Due</th>
+                <th>Due Date</th>
+                <th>Note</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wedding - <div>dd/mm/yyyy</div></td>
+                    <td>Customer name1</td>
+                    <td><a class="dashboard-link">INV-001</a>Full service planning</td>
+                    <td>$500</td>
+                    <td>dd/mm/yyy</td>
+                    <td>Deposit</td>
+                </tr>
+                <tr>
+                    <td>Wedding - <div>dd/mm/yyyy</div></td>
+                    <td>Customer name1</td>
+                    <td><a class="dashboard-link">INV-001</a>Full service planning</td>
+                    <td>$500</td>
+                    <td>dd/mm/yyy</td>
+                    <td>Deposit</td>
+                </tr>
+                <tr>
+                    <td>Wedding - <div>dd/mm/yyyy</div></td>
+                    <td>Customer name1</td>
+                    <td><a class="dashboard-link">INV-001</a>Full service planning</td>
+                    <td>$500</td>
+                    <td>dd/mm/yyy</td>
+                    <td>Deposit</td>
+                </tr>
+                <tr>
+                    <td>Wedding - <div>dd/mm/yyyy</div></td>
+                    <td>Customer name1</td>
+                    <td><a class="dashboard-link">INV-001</a>Full service planning</td>
+                    <td>$500</td>
+                    <td>dd/mm/yyy</td>
+                    <td>Deposit</td>
+                </tr>
+                <tr>
+                    <td>Wedding - <div>dd/mm/yyyy</div></td>
+                    <td>Customer name1</td>
+                    <td><a class="dashboard-link">INV-001</a>Full service planning</td>
+                    <td>$500</td>
+                    <td>dd/mm/yyy</td>
+                    <td>Deposit</td>
+                </tr>
+                <tr>
+                    <td>Wedding - <div>dd/mm/yyyy</div></td>
+                    <td>Customer name1</td>
+                    <td><a class="dashboard-link">INV-001</a>Full service planning</td>
+                    <td>$500</td>
+                    <td>dd/mm/yyy</td>
+                    <td>Deposit</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="ido-panel-futor">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="https://kb.idoweddings.com/admin/dashboard/index#" class="ido-link">View all points dues</a>
+            </div>
+        </div>
+    </div>
+</div>
+		            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget-section footer-panel ui-sortable" data-position="footer">
+                								<div class="adm-womi-upcoming-events-block ido-panel ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" data-widget="upcoming-events">
+    <div class="ido-panel-header ui-sortable-handle ui-widget-header ui-corner-all">
+        <div class="ido-btn-block"></div>
+        <h2>Upcoming events</h2>
+        <div class="ido-btn-block">
+            <button type="button" class="btn btn-default ido-panel-btn remove-panel-btn" data-toggle="tooltip" title="" data-original-title="Hide section">X</button>
+        </div>
+    </div>
+    <div class="ido-panel-body">
+
+        <form id="w2" class="form-horizontal" action="https://kb.idoweddings.com/admin/dashboard/index" method="get">
+            <div class="block-top-filters">
+                <div class="form-group">
+                    <select id="sel1" class="form-control ido-panel-select chosen-style event_filter" name="owner" template="{input}{error}" style="display: none;">
+<option value="">All</option>
+<option value="1">WOMI's</option>
+<option value="2">Venues</option>
+<option value="3">Assigned to me</option>
+</select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 112px;" title="" id="sel1_chosen"><a class="chosen-single"><span>All</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                </div>
+                <div class="form-group">
+                    <select class="chosen-style event_filter" name="period" style="display: none;">
+<option value="today" selected="">Today</option>
+<option value="week">This week</option>
+<option value="month">This month</option>
+<option value="year">This year</option>
+</select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 79px;" title=""><a class="chosen-single"><span>Today</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                </div>    
+                <!--div class="form-group">
+                    <select class="form-control ido-panel-select chosen-style" id="sel2">
+                        <option>Today</option>
+                        <option>This week</option>
+                        <option>This month</option>
+                        <option>This year</option>
+                    </select>
+                </div-->
+
+            </div>
+        </form>        <div id="w3" class="list-view"><div class="empty">No events</div></div>    
+    </div>
+</div>		            </div>
+        </div>
+    </div>
+</div>
+
+
+										</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--    <div class="ido-chat-open ido-pointer"></div>-->
+
+    <div><div class="ido-new-chat"><div class="ido-new-chat-header ch-row middle-xs"><div class="logo_block ch-col-xs-1"></div> <div class="title ch-col-xs-1">Chat</div> <div class="search-chat ch-col-xs-4 mp-r-0"><form action="https://kb.idoweddings.com/admin/dashboard/index#" method="get" class="input-group top-search-form"><div class="search-f"><div class="form-group field-search-s required"><input type="text" id="search-new-chat" name="Search[s]" placeholder="Search" autocomplete="off" aria-required="true" class="form-control"> <div class="help-block"></div></div> <input type="submit" value=""></div></form></div> <div class="ch-col-xs text-tight"><button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button></div></div> <div class="ido-new-chat-body"><div class="left-section"><div class="box"><ul class="nav nav-tabs ido-chat-menu"><li class="active"><a id="close-welcome"><!----> <i class="ido-icon-recent-chats"></i></a> <a class="dropdown-toggle ant-dropdown-trigger">Recent chats <span class="caret"></span></a></li> <li class=""><a id="open-welcome"><i class="ido-icon-contacts"></i></a> <a class="dropdown-toggle ant-dropdown-trigger">Contacts <span class="caret"></span></a></li> <!----> <!----> <li class=""><a class="settings-btn ant-dropdown-trigger"><i class="ido-icon-settings"></i></a></li></ul> <div class="tab-content"><div id="home" class="tab-pane fade in active"><div class="ido-newchat-title-block"><div class="title-list-chat">Favorites</div></div> <ul class="ido-newchat-list recent-chats-list"><li class="  c_33"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_I"><span class="ido-contact-icon icon-letter">IP</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            Irina P
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (irina55)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_156"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1000)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_157"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1001)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_158"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1002)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_159"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1004)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_160"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1005)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_161"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1006)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_162"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1007)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_164"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1100)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_165"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (aren666)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_166"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1101)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_167"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1102)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_168"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1103)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_169"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_A"><span class="ido-contact-icon icon-letter">AA</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            Aren Aren
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (aren111)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_170"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_F"><span class="ido-contact-icon icon-letter">FL</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            First Last
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test1104)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_171"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_T"><span class="ido-contact-icon icon-letter">TT</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            Test123 Test123
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test12)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li><li class="  c_172"><a href="https://kb.idoweddings.com/admin/dashboard/index#"><div class="ch-row"><div class="ch-col-xs-3 ido-chat-avatar"><div class="ido-videocall-image alpha_T"><span class="ido-contact-icon icon-letter">TT</span></div> <div class="badge-newchat alpha_user_active"></div></div> <div class="ch-col-xs-9"><div class="ch-row"><div class="ch-col-xs-8 ido-cont-name">
+                            test12221 test5554
+                        </div> <div class="ch-col-xs-4 ido-date-chat"><span></span> <span></span></div></div> <div class="ch-row"><div class="ch-col-xs-9 ido-cont-text">
+                            (test666)
+</div> <div class="ch-col-xs-3 ido-active-block"><!----> <!----></div></div></div></div></a></li></ul></div> <div id="menu1" class="tab-pane fade"><h3>Menu 1</h3> <p>Some content in menu 1.</p></div> <div id="menu2" class="tab-pane fade"><h3>Menu 2</h3> <p>Some content in menu 2.</p></div> <div id="menu3" class="tab-pane fade"><h3>Menu 3</h3> <p>Some content in menu 3.</p></div></div></div></div> <div class="right-section"><div class="active"><div class="ido-messager-heder"><div class="ch-row middle-xs"><div class="title ch-col-xs-8">
+                        
+                    </div> <div class="btn-block-messanger ch-col-xs-4"><button class="btn-link"><i class="ido-icon-video"></i></button> <button class="btn-link"><i class="phone_time"></i></button></div></div> <div class="ch-row"><div class="user-content ch-col-xs-12">
+                        
+                    </div></div></div> <div class="ido-messager-body"> <div class="welcome"><div class="ch-row center-xs middle-xs"><div class="ch-col-xs-12"><div class="info-block"><h2>Welcome Patti Metzger</h2> <p><strong>Find a contact and start chatting</strong></p> <div class="logo-welcome"></div></div></div></div></div></div> <div class="ido-messager-footor"><form id="ido-msg-form"><!----> <div class="ch-row middle-xs"><div class="ch-col-xs-6"><button type="button" class="btn-link"><i class="ido-icon-smile"></i></button> <div class="btn"><i class="ido-icon-attach"></i> <input type="file" class="chat_file chat-file"></div></div> <div class="ch-col-xs-6"><label><input type="checkbox" value="1" id="mess-send-email" class="checkbox"> <span class="checkbox-custom"></span>
+                                Send email with message
+                            </label></div></div> <div class="ch-row ido-message-container middle-xs disabled_mess"><div class="ch-col-xs-10"><div contenteditable="false" ido-icon-newsendid="ido-text-box" class="ido-blk-8 ido-message-text-box ido-text-box ido-text required disabled_mess"></div></div> <div class="ch-col-xs-2"><button id="ido-newmsg-sbmt" title="Send Message" class="ido-btn ido-btn-text-panel"><i class="ido-icon-newsend"></i></button></div></div></form></div> <!----></div> <div class="convers_image" imageurl="imageUrl"><!----></div> <div class="convers_video" videourl="videoUrl"><!----></div></div></div></div> <!----></div>
+        <script>var yiiSett = {"adminPanel":"opened","filterPanel":"","previewPanel":""}    </script>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/yii.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/admin-dashboard.js"></script>
+<script src="js/yii.activeForm.js"></script>
+<!-- <script src="js/idochat_node.js"></script> -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/add-multiple-items.js"></script>
+<script src="js/snackbar.js"></script>
+<script src="js/kendo.all.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/yii.validation.js"></script>
+<script>jQuery(function ($) {
+jQuery('#w2').yiiActiveForm([], []);
+jQuery('#w4').alert();
+jQuery('#w5').yiiActiveForm([], []);
+jQuery('#modal').modal({"show":false});
+jQuery('#w6').yiiActiveForm([{"id":"search-s","name":"s","container":".field-search-s","input":"#search-s","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Search cannot be blank."});yii.validation.string(value, messages, {"message":"Search must be a string.","max":40,"tooLong":"Search should contain at most 40 characters.","skipOnEmpty":1});}}], []);
+jQuery('#w7').alert();
+});</script>
+
+</body></html>

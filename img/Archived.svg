@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+  <style> .cls-1, .cls-2 {fill: #d45650;}</style>
+  <circle style="fill:none; stroke:#d45650; stroke-width:2px;" r="8" cx="10" cy="10" />
+  <path class="cls-1" d="M6,7.476L7.461,6.02,14,12.524,12.539,13.98Z"/>
+  <path class="cls-2" d="M12.524,6L13.98,7.461,7.476,14,6.02,12.539Z"/>
+</svg>

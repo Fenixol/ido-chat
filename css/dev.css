@@ -1,0 +1,31 @@
+.filter.closed {
+	display:none;
+}
+/*.filter.opened {
+	display:inline-block;
+}*/
+/*временный стиль, простто чб не расползался фильтр*/
+/*.drop_bottom {
+	max-height: 100px;
+	width:250px;
+	overflow-y: auto; 	
+}*/
+/*.preview {
+	display:none;
+}*/
+.subtitle {
+	text-transform: uppercase;
+	font-weight:bold;
+}
+/*.list img {
+	width:60px;
+}*/
+/*.checkbox_list{
+	max-height:150px;
+	padding-left:20px;
+	overflow-y:scroll;
+	overflow-x:hidden; 
+}*/
+.timeslot_list li {
+	float:left;
+}

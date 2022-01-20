@@ -1,0 +1,165 @@
+.multiple-modal .modal-body {
+    padding: 10px 6px;
+}
+.add-multiple-items-modal label{
+    font-weight:normal;
+    font-family: 'Conv_proximanova-regular';
+}
+.multiple-modal a.chosen-single{
+    color:#2b1309;
+}
+.add-multiple-items-modal .select-block{
+    padding: 5px;
+}
+.add-multiple-items-modal .select-block{
+
+}
+.list-block-wedding-items{
+    display: flex;
+    flex-wrap: wrap;
+    height:455px;
+    overflow-y: auto;
+}
+.wedding-item-block {
+    width: 32%;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #faf9f9;
+    margin: 3px;
+    position: relative;
+}
+.wedding-item-block textarea {
+    resize: none;
+}
+.wedding-item-block .form-horizontal .control-label{
+    padding-right: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.wedding-item-block .form-group{
+    margin: 0;
+}
+.wedding-item-block .form-group>div{
+    background-color: #ffffff;
+    padding: 5px 5px 2px 5px;
+}
+.wedding-item-block .form-group:last-child>div{
+    padding-bottom: 5px;
+}
+.wedding-item-block .uploid-image,
+.wedding-item-block .status-block{
+    display:flex;
+    justify-content: space-between;
+}
+.wedding-item-block .btn-block{
+    padding-top: 3px;
+    text-align: right;
+}
+.wedding-item-block .form-group>div.status-block{
+    padding-bottom: 5px;
+}
+.wedding-item-block .checkbox + .wedding-item-block .checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    /* left: 8px; */
+    bottom: 2px;
+    left: 4px;
+    border-radius: 2px;
+    background: none;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.wedding-item-block .form-control-numeric,
+.wedding-item-block .form-control-decimal{
+    width: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.wedding-item-block .form-control-numeric .k-numeric-wrap.k-state-default,
+.wedding-item-block .form-control-decimal .k-numeric-wrap.k-state-default{
+    border:none;
+}
+.wedding-item-block .form-control-numeric  .k-select,
+.wedding-item-block .form-control-decimal  .k-select{
+    background-color: #fcfcfc;
+    border-color: #fcfcfc;
+}
+.wedding-item-block .form-control-numeric .k-numeric-wrap .k-input,
+.wedding-item-block .form-control-decimal .k-numeric-wrap .k-input{
+    border: none;
+    box-shadow: none;
+}
+.wedding-item-block .form-control-numeric .k-icon,
+.wedding-item-block .form-control-decimal .k-icon {
+    background-image: none;
+}
+.wedding-item-block .circle {
+    position: absolute;
+    align-items: center;
+    font-family: 'Conv_proximanova-regular';
+    color: #c55f55;
+    background: #fff;
+    border:1px solid #c55f55;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+}
+
+.wedding-item-block .circle__number {
+    font-size: 8px;
+    line-height: 10px;
+    padding-top: 2px;
+}
+.modal-multiple-footer{
+
+    padding: 10px;
+}
+.modal-multiple-footer button{
+    margin: 5px;
+}
+.wedding-item-block .right-top-radius-5{
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+.wedding-item-block .right-bottom-radius-5{
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+.wedding-item-block .checkbox + .checkbox-custom::before {
+    left: 4px;
+}
+.wedding-item-block .status-block-bottom label{
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-left: 25px;
+}
+.wedding-item-block .status-block-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.wedding-item-block .status-block-bottom .checkbox-custom {
+    top: -2px;
+}
+.wedding-item-block .uploid-image-block label.control-label{
+    padding-top: 0;
+    padding-right: 0;
+}
+.add-multiple-items-form .ui.dropdown,
+.add-multiple-items-form .ui.dropdown input {
+    font-size: 11px;
+    height: 29px;
+}

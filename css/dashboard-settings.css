@@ -1,0 +1,82 @@
+.venue-settins{
+    font-family: 'Conv_proximanova-regular';
+    font-weight: bold;
+    color:#2b1309;
+}
+.adm-sections{
+    background-color: #fff;
+    opacity: 0.8;
+}
+.filter.opened~.adm-sections{
+    margin-left: 235px;
+    margin-right: 15px;
+}
+.filter.closed~.adm-sections{
+    margin-left: 0px;
+}
+.setting-list{
+
+    -moz-column-count: 3;
+    -webkit-column-count:3;
+    column-count: 3;
+    margin-top: 10px;
+    margin: 0 auto;
+
+}
+
+.adm-sections .checkbox {
+    position: relative;
+    opacity: 1;
+    border: none;
+    margin-top: 0;
+    padding-top: 2px;
+    margin-bottom: 30px;
+}
+.adm-sections .checkbox input[type=checkbox] {display: none;}
+.adm-sections .checkbox input[type=checkbox] + label{
+    padding-left: 0;
+}
+.adm-sections .checkbox input[type=checkbox] + label:before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    color: transparent;
+    display: inline-block;
+    border: 1px solid #ebe8e6;
+    line-height: 16px;
+    margin: -5px 25px 0 0;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    font-weight: normal;
+}
+.adm-sections .checkbox input[type=checkbox]:checked + label:before {
+    color: #c55f55;
+}
+.adm-sections .settings{
+    margin-bottom: 20px;
+}
+.adm-sections  .Vprofile {
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 15px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+.block-flex-center-elements{
+    display: flex;
+    justify-content: center;
+}
+.block-flex-space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.venue-settins .list-group-item{
+    color: #c55f55;
+}
+.venue-settins .list-group-item.active{
+    background-color: #fff;
+    color: #c55f55;
+}
