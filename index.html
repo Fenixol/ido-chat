@@ -1399,7 +1399,7 @@
 	</section>
 <!--    <div class="ido-chat-open ido-pointer"></div>-->
 <div class="ido-new-chat-open ido-pointer">
-  <div class="count-circle-badge">2</div>
+  <div class="count-circle-badge">33</div>
 </div>
 <div class="ido-new-chat">
   <div class="ido-new-chat-header ch-row middle-xs">
@@ -1407,12 +1407,13 @@
       <div class="title ch-col-xs-1">Chat</div>
       <div class="search-chat ch-col-xs-4 mp-r-0">
           <form class="input-group top-search-form" action="#" method="get">
-              <div class="search-f" style="">
-                  <div class="form-group field-search-s required">
-                      <input type="text" id="search-new-chat" class="form-control" name="Search[s]" placeholder="Search" autocomplete="off" aria-required="true">
-                      <div class="help-block"></div>
-                  </div>
-                  <input type="submit" value="">
+              <div class="search-f">
+                <input type="submit" value="">
+                <div class="form-group field-search-s required">
+                    <input type="text" id="search-new-chat" class="form-control" name="Search[s]" placeholder="Search" autocomplete="off" aria-required="true">
+                    <div class="help-block"></div>
+                </div>
+                <a class="clear_filter clear_search" title="Clear filter">X</a>
               </div>
           </form>
       </div>
@@ -1425,11 +1426,11 @@
           <div class="box">
               <ul class="nav nav-tabs ido-chat-menu">
                   <li class="active">
-                      <a data-toggle="tab" href="#home" id="close-welcome">
+                      <a data-toggle="tab" href="#home" id="chats-tab">
                           <div class="count-circle-badge">2</div>
                           <i class="ido-icon-recent-chats"></i>
                       </a>
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent chats
+                      <a class="dropdown-toggle chats-dropdown" data-toggle="dropdown" href="#">Chats
                           <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                           <li><a href="#" class="active">Recent  chats by time</a></li>
@@ -1445,130 +1446,144 @@
                       </ul>
                   </li>
                   <li>
-                      <a data-toggle="tab" href="#menu1" id="open-welcome">
+                      <a data-toggle="tab" href="#menu1" id="contacts-tab">
                           <i class="ido-icon-contacts"></i>
+                          Contacts
                       </a>
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contacts
-                          <span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="#" class="active">All my actual contacts</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">My Company staff</a></li>
-                          <li><a href="#">My Customers</a></li>
-                          <li><a href="#">My Vendors</a></li>
-                          <li><a href="#">All Venues</a></li>
-                          <li><a href="#">All Travel agents</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">Venues' Customers</a></li>
-                          <li><a href="#">Travel agents' Customers</a></li>
-                      </ul>
                   </li>
-                  <li>
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Location
-                          <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                              <li class="nested-list">
-                                  <a href="#" class="active">Caribbean</a>
-                                  <ul>
-                                      <li class="nested-list">
-                                          <a href="#">Dominican republic</a>
-                                          <ul>
-                                              <li><a href="#">Punta Cana</a></li>
-                                          </ul>
-                                      </li>
-
-                                  </ul>
-                              </li>
-                              <li>
-                                  <a href="#">Central America</a>
-                                  <ul>
-                                      <li><a href="#">Costa Rica</a></li>
-                                      <li><a href="#">Nicaragua</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                  </li>
-                  <li>
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Vendor type
-                          <span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="#" class="active">Vendor type vendor 1</a></li>
-                          <li><a href="#">Vendor type vendor 2</a></li>
-                          <li><a href="#">Vendor type vendor 3</a></li>
-                      </ul>
-                  </li>
-                  <li>
+                  
+                  <li class="setting-tab">
                       <a class="settings-btn"  href="#">
                           <i class="ido-icon-settings"></i>
                       </a>
                       <div class="setting-menu-chat">
                           <form class="form">
                               <div class="form-group row header-block-setting-chat">
-                                  <div  class="col-sm-6">
-                                      My status
+                                  <div  class="col-sm-12 title">
+                                    Chat Settings
                                   </div>
-                                  <div class="col-sm-6 right-title">
-                                      Chat Settings
+                                  <div class="col-sm-12">
+                                      My status when I am online
                                   </div>
                               </div>
-                              <div class="form-group row">
+                              <div class="row">
                                   <label  class="col-sm-6 control-label p-r-0">For company staff</label>
-                                  <div class="col-sm-6 p-l-0">
-                                      <div class="input-group">
-                                          <span class="input-group-addon active"><i class="fa fa-circle"></i></span>
-                                          <select class="form-control">
-                                              <option>Online</option>
-                                              <option>Offline</option>
-                                          </select>
-                                      </div>
+                                  <div class="col-sm-6 p-l-5">
+                                        <a class="dropdown-toggle chat-settings-dropdown" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-circle"></i>
+                                            Online
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu chat-settings-select">
+                                            <li>
+                                                <div class="status-content-wrap">
+                                                    <img src="/images/svg/active.svg" class="status-img-wrap" alt="Active" title="Active">
+                                                </div>
+                                                <a href="#">Online</a>
+                                            </li>
+                                            <li>
+                                                <div class="status-content-wrap">
+                                                    <img src="/images/svg/not_active.svg" class="status-img-wrap" alt="Not active" title="Not active">
+                                                </div>
+                                                <a href="#">Offline</a>
+                                            </li>
+                                        </ul>
                                   </div>
                               </div>
-                              <div class="form-group row">
-                                  <label  class="col-sm-6 control-label">For venues</label>
-                                  <div class="col-sm-6 p-l-0">
-                                      <div class="input-group">
-                                          <span class="input-group-addon active"><i class="fa fa-circle"></i></span>
-                                          <select class="form-control">
-                                              <option>Online</option>
-                                              <option>Offline</option>
-                                          </select>
-                                      </div>
+                              <div class="row">
+                                  <label  class="col-sm-6 control-label p-r-0">For venues</label>
+                                  <div class="col-sm-6 p-l-5">
+                                    <a class="dropdown-toggle chat-settings-dropdown" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-circle"></i>
+                                        Online
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu chat-settings-select">
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/active.svg" class="status-img-wrap" alt="Active" title="Active">
+                                            </div>
+                                            <a href="#">Online</a>
+                                        </li>
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/not_active.svg" class="status-img-wrap" alt="Not active" title="Not active">
+                                            </div>
+                                            <a href="#">Offline</a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
-                              <div class="form-group row">
-                                  <label  class="col-sm-6 control-label">For vendors</label>
-                                  <div class="col-sm-6 p-l-0">
-                                      <div class="input-group">
-                                          <span class="input-group-addon active"><i class="fa fa-circle"></i></span>
-                                          <select class="form-control">
-                                              <option>Online</option>
-                                              <option>Offline</option>
-                                          </select>
-                                      </div>
+                              <div class="row">
+                                  <label  class="col-sm-6 control-label p-r-0">For vendors</label>
+                                  <div class="col-sm-6 p-l-5">
+                                    <a class="dropdown-toggle chat-settings-dropdown" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-circle"></i>
+                                        Online
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu chat-settings-select">
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/active.svg" class="status-img-wrap" alt="Active" title="Active">
+                                            </div>
+                                            <a href="#">Online</a>
+                                        </li>
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/not_active.svg" class="status-img-wrap" alt="Not active" title="Not active">
+                                            </div>
+                                            <a href="#">Offline</a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
-                              <div class="form-group row">
-                                  <label  class="col-sm-6 control-label">For agencies</label>
-                                  <div class="col-sm-6 p-l-0">
-                                      <div class="input-group">
-                                          <span class="input-group-addon active"><i class="fa fa-circle"></i></span>
-                                          <select class="form-control">
-                                              <option>Online</option>
-                                              <option>Offline</option>
-                                          </select>
-                                      </div>
+                              <div class="row">
+                                  <label  class="col-sm-6 control-label p-r-0">For agencies</label>
+                                  <div class="col-sm-6 p-l-5">
+                                    <a class="dropdown-toggle chat-settings-dropdown" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-circle"></i>
+                                        Online
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu chat-settings-select">
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/active.svg" class="status-img-wrap" alt="Active" title="Active">
+                                            </div>
+                                            <a href="#">Online</a>
+                                        </li>
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/not_active.svg" class="status-img-wrap" alt="Not active" title="Not active">
+                                            </div>
+                                            <a href="#">Offline</a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
-                              <div class="form-group row">
-                                  <label  class="col-sm-6 control-label">For customers</label>
-                                  <div class="col-sm-6 p-l-0">
-                                      <div class="input-group">
-                                          <span class="input-group-addon"><i class="fa fa-circle"></i></span>
-                                          <select class="form-control">
-                                              <option>Offline</option>
-                                              <option>Online</option>
-                                          </select>
-                                      </div>
+                              <div class="row">
+                                  <label  class="col-sm-6 control-label p-r-0">For customers</label>
+                                  <div class="col-sm-6 p-l-5">
+                                    <a class="dropdown-toggle chat-settings-dropdown" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-circle"></i>
+                                        Online
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu chat-settings-select">
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/active.svg" class="status-img-wrap" alt="Active" title="Active">
+                                            </div>
+                                            <a href="#">Online</a>
+                                        </li>
+                                        <li>
+                                            <div class="status-content-wrap">
+                                                <img src="/images/svg/not_active.svg" class="status-img-wrap" alt="Not active" title="Not active">
+                                            </div>
+                                            <a href="#">Offline</a>
+                                        </li>
+                                    </ul>
                                   </div>
                               </div>
 
@@ -1594,13 +1609,13 @@
                           <li class="active-user">
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
-                                          <div class="badge-newchat alpha_user_active"></div>
+                                          <div class="badge-newchat alpha_user_active" data-toggle="tooltip" data-placement="top" data-original-title="User`s status: Online"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -1637,13 +1652,13 @@
                           <li class="active-user">
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_S">
                                               <span class="ido-contact-icon icon-letter">FL</span>
                                           </div>
-                                          <div class="badge-newchat alpha_user_active"></div>
+                                          <div class="badge-newchat alpha_user_active" data-toggle="tooltip" data-placement="top" data-original-title="User`s status: Online"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   First & Last Name
@@ -1670,13 +1685,13 @@
                           <li class="show-user">
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_Y">
                                               <span class="ido-contact-icon icon-letter">FL</span>
                                           </div>
-                                          <div class="badge-newchat alpha_user_active"></div>
+                                          <div class="badge-newchat alpha_user_active" data-toggle="tooltip" data-placement="top" data-original-title="User`s status: Offline"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   First & Last Name
@@ -1702,13 +1717,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_G">
                                               <span class="ido-contact-icon icon-letter">SA</span>
                                           </div>
                                           <div class="badge-newchat"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Svitlana Ivanova
@@ -1743,13 +1758,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">FL</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   First & Last Name
@@ -1775,13 +1790,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_G">
                                               <span class="ido-contact-icon icon-letter">AJ</span>
                                           </div>
                                           <div class="badge-newchat"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Ann Jonson
@@ -1816,13 +1831,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_B">
                                               <span class="ido-contact-icon icon-letter">FL</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   First & Last Name
@@ -1848,13 +1863,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -1881,13 +1896,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -1914,13 +1929,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -1947,13 +1962,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_B">
                                               <span class="ido-contact-icon icon-letter">FL</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   First & Last Name
@@ -1979,13 +1994,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -2012,13 +2027,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -2045,13 +2060,13 @@
                           <li>
                               <a href="#">
                                   <div class="ch-row">
-                                      <div class="ch-col-xs-3 ido-chat-avatar">
+                                      <div class="ch-col-xs-2 ido-chat-avatar">
                                           <div class="ido-videocall-image new_alpha_A">
                                               <span class="ido-contact-icon icon-letter">PM</span>
                                           </div>
                                           <div class="badge-newchat alpha_user_active"></div>
                                       </div>
-                                      <div class="ch-col-xs-9">
+                                      <div class="ch-col-xs-10 p-l-20">
                                           <div class="ch-row">
                                               <div class="ch-col-xs-8 ido-cont-name">
                                                   Patti Metzger
@@ -2079,6 +2094,46 @@
 
                   </div>
                   <div id="menu1" class="tab-pane fade">
+                      <div class="filter-section">
+                        <div class="filter-block">
+                            <select id="contacts" class="chosen-style filter_field" name="conact" style="display: none;">
+                                <option value="">All contacts</option>
+                                <option value="">Our Company staff</option>
+                                <option value="">WOMI staff</option>
+                                <option value="">Customers</option>
+                                <option value="">Vendors</option>
+                            </select>
+                        </div>
+                        <div class="filter-block">
+                            <select id="locations" class="chosen-style filter_field" name="location_id" style="display: none;">
+                                <optgroup label="Region 1">
+                                        <option value="">Location</option>
+                                        <option value="">Location 1</option>
+                                        <option value="">Location 2</option>
+                                        <option value="">Location 3</option>
+                                        <option value="">Location 4</option>
+                                </optgroup>
+                                <optgroup label="Region 2">
+                                        <option value="">Location</option>
+                                        <option value="">Location 1</option>
+                                        <option value="">Location 2</option>
+                                        <option value="">Location 3</option>
+                                        <option value="">Location 4</option>
+                                </optgroup>
+                            </select>
+                            <a class="clear_filter" title="Clear filter">X</a>
+                        </div>
+                        <div class="filter-block">
+                            <select id="vendor_type" class="chosen-style filter_field" name="location_id" style="display: none;">
+                                <option value="">Vendor</option>
+                                <option value="">Vendor type 1</option>
+                                <option value="">Vendor type 2</option>
+                                <option value="">Vendor type 3</option>
+                                <option value="">Vendor type 4</option>
+                            </select>
+                            <a class="clear_filter" title="Clear filter">X</a>
+                        </div>
+                      </div>
                       <h3>Menu 1</h3>
                       <p>Some content in menu 1.</p>
                   </div>
@@ -2156,9 +2211,6 @@
                           <button type="button"  class="btn-link">
                               <i class="ido-icon-smile"></i>
                           </button>
-                          <button class="btn-link">
-                              <i class="ido-icon-attach"></i>
-                          </button>
                       </div>
                       <div class="ch-col-xs-6">
                           <label>
@@ -2168,14 +2220,32 @@
                           </label>
                       </div>
                   </div>
-                  <div class="ch-row ido-message-container middle-xs">
-                      <div class="ch-col-xs-10">
-                          <textarea class="new-meassage-input" rows="5" cols="45" name="text" placeholder="Enter your message here ..."></textarea>
+                  <div class="ch-row">
+                      <div class="ido-message-container ch-col-xs-10">
+                        <div class="">
+                            <textarea class="new-meassage-input" rows="5" cols="42" name="text" placeholder="Enter your message here*** ..."></textarea>
+                        </div>
+                        <div class="">
+                            <button id="ido-newmsg-sbmt" title="Send Message" class="ido-btn ido-btn-text-panel">
+                                <i class="ido-icon-newsend"></i>
+                            </button>
+                        </div>
                       </div>
-                      <div class="ch-col-xs-2">
-                          <button id="ido-newmsg-sbmt" title="Send Message" class="ido-btn ido-btn-text-panel">
-                              <i class="ido-icon-newsend"></i>
-                          </button>
+                      
+                      <div class="ch-col-xs-1">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 18 21" style="enable-background:new 0 0 18 21;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#614B50;}
+                        </style>
+                        <path class="st0" d="M1.9,17.1V5.2l3.1-2.6v2.6H3.2v1.6h3.3l0-4.7h6.8c0.1,0,0.3,0.1,0.3,0.3v6.2l1.6,1.6V2.2c0-1-0.8-1.8-1.8-1.8
+                            l-7.9,0l-0.1,0c-0.2,0-0.3,0.1-0.4,0.2L0.6,4.2C0.4,4.3,0.3,4.5,0.3,4.7l0,12.4c0,1,0.8,1.8,1.8,1.8l8.6,0v-1.6l-8.6,0
+                            C2,17.3,1.9,17.2,1.9,17.1z M17.6,13.3L13,8.6c-0.4-0.4-1.1-0.4-1.5,0l-4.7,4.7c-0.2,0.2-0.3,0.7-0.1,1c0.1,0.3,0.4,0.5,0.7,0.5
+                            l3.4,0v-1.6l-1.7,0l3.2-3.2l3.1,3.2l-1.9,0l0,6.6l0,0.1c0.1,0.4,0.4,0.7,0.8,0.7c0.4,0,0.8-0.4,0.8-0.8l0-5l1.9,0
+                            c0.4,0,0.6-0.2,0.8-0.5C18,14,17.9,13.5,17.6,13.3z"/>
+                        </svg>
                       </div>
                   </div>
 
@@ -2202,6 +2272,27 @@
 <div id="idochat-app"></div>
         <script>var yiiSett = {"adminPanel":"opened","filterPanel":"","previewPanel":""}    </script>
 </div>
+
+<nav id="chat-context-menu" class="chat-context-menu">
+    <ul class="chat-context-menu__items">
+        <li class="chat-context-menu__item">
+            <a href="#" class="chat-context-menu__link" data-action="Hide">Hide Chat</a>
+        </li>
+        <li class="chat-context-menu__item">
+            <a href="#" class="chat-context-menu__link" data-action="Add">Add user to Favorites</a>
+        </li>
+        <li role="separator" class="chat-context-menu__divider"></li>
+        <li class="chat-context-menu__item badge-status active-user">
+            <div class="badge-newchat alpha_user_active"></div>
+            <a href="#" class="chat-context-menu__link" data-action="Online">My status for this user: Online</a>
+        </li>
+        <li class="chat-context-menu__item badge-status">
+            <div class="badge-newchat alpha_user_active"></div>
+            <a href="#" class="chat-context-menu__link" data-action="Offline">My status for this user: Offline</a>
+        </li>
+    </ul>
+</nav>
+
 <script src="js/jquery.js"></script>
 <script src="js/yii.js"></script>
 <script src="js/jquery-ui.js"></script>
