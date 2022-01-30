@@ -20,11 +20,11 @@ $(document).ready(function() {
       $(this).hide();
   });
 
-  $('#open-welcome').click(function() {
+  $('#chats-tab').click(function() {
       $(".right-section .welcome").show();
       $(".right-section .active").hide();
   });
-  $('#close-welcome').click(function() {
+  $('#contacts-tab').click(function() {
       $(".right-section .welcome").hide();
       $(".right-section .active").show();
   });

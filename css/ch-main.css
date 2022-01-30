@@ -21,6 +21,17 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'open_sanssemibold';
+  src: url('../fonts/opensanssemibold-webfont.eot');
+  src: url('../fonts/opensanssemibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensanssemibold-webfont.woff2') format('woff2'),
+  url('../fonts/opensanssemibold-webfont.woff') format('woff'),
+  url('../fonts/opensanssemibold-webfont.ttf') format('truetype'),
+  url('../fonts/opensanssemibold-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Conv_proximanova-regular';
   src: url('../fonts/proximanova-regular.eot');
   src: local('☺'),
@@ -39,6 +50,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'ido-chat';
+  src: url('../fonts/ido-chat.eot?86638308');
+  src: url('../fonts/ido-chat.eot?86638308#iefix') format('embedded-opentype'),
+       url('../fonts/ido-chat.woff2?86638308') format('woff2'),
+       url('../fonts/ido-chat.woff?86638308') format('woff'),
+       url('../fonts/ido-chat.ttf?86638308') format('truetype'),
+       url('../fonts/ido-chat.svg?86638308#ido-chat') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-file-chat:before { content: '\e872'; } /* '' */
+
 .p-l-5 { 
   padding-left: 5px;
 }
@@ -115,7 +140,7 @@ button.close {
   display: none;
   position: fixed !important;
   width: 760px;
-  min-height: 600px;
+  height: 600px;
   opacity: 1;
   background: #ffffff;
   position: absolute;
@@ -195,7 +220,7 @@ button.close {
 
 .ido-new-chat-body .left-section{
   border-right: 1px solid #cdcdcd;
-  width: 380px;
+  width: 385px;
 }
 .ido-new-chat-body .ido-chat-menu{
   background-color: #f7f5f5;
@@ -256,6 +281,12 @@ button.close {
 .ido-new-chat-body .ido-chat-menu li {
   height: 40px;
 }
+.ido-new-chat-body .ido-chat-menu li:hover {
+  background-color: #eeeeee;
+}
+.ido-new-chat-body .ido-chat-menu li.active {
+  background-color: #fff;
+}
 .ido-new-chat-body .ido-chat-menu .dropdown-menu ul>li>a{
   padding-left: 40px;
   display: block;
@@ -295,12 +326,16 @@ button.close {
   margin-right: 0;
   height: 100%;
 }
+
 .ido-new-chat-body .ido-chat-menu .ido-icon-settings:before{
   line-height: 40px;
 }
 .ido-new-chat-body .ido-chat-menu li.active a.settings-btn{
   position: relative;
   z-index: 2000;
+}
+.ido-new-chat-body .ido-chat-menu a.settings-btn:hover{
+  color: #c55f55;
 }
 .ido-new-chat-body .ido-chat-menu a.dropdown-toggle{
   font-family:'Conv_proximanova-regular';
@@ -380,6 +415,7 @@ background-color: #ecffdd;
 }
 .ido-chat-avatar{
   color:#2b1309;
+  font-family: 'open_sanssemibold';
 }
 .ido-chat-avatar .badge-newchat{
   display: flex;
@@ -454,7 +490,7 @@ background-color: #ecffdd;
 }
 .ido-messager-heder{
   background-color:#f7f5f5;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 8px 10px;
   border-bottom: 1px solid #ddd;
 }
 .ido-messager-heder .title{
@@ -467,11 +503,30 @@ background-color: #ecffdd;
   text-align: right;
 }
 .ido-messager-heder .btn-block-messanger button{
+  color:#614b50;
+  padding-left: 0px;
+  padding-right: 2px;
+}
+.ido-messager-heder .btn-block-messanger button .phone_time:before{
+  color:#614b50;
+}
+.ido-messager-heder .btn-block-messanger button:hover .phone_time:before{
+  color:#C55F55;
+}
+.ido-messager-heder .btn-link:hover,
+.ido-messager-heder .btn-link:focus {
+  text-decoration: none;
   color:#C55F55;
 }
 .ido-messager-heder .btn-block-messanger button>i:before{
   padding: 0;
   font-size: 18px;
+}
+.ido-messager-heder .first-row{
+  height: 27px;
+}
+.ido-messager-heder .user-content{
+  line-height: 13px;
 }
 .ido-messager-body{
   padding: 10px;
@@ -484,6 +539,12 @@ background-color: #ecffdd;
   font-size: 9px;
   display: inline-flex;
   justify-content: space-between;
+}
+.received-message-block{
+  margin-bottom: 10px;
+}
+.received-message-block .ido-chat-avatar{
+  padding-left: 0;
 }
 .received-message-block .ido-chat-avatar .badge-newchat {
   display: block;
@@ -499,8 +560,9 @@ background-color: #ecffdd;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   font-family: 'Conv_proximanova-regular';
-  font-size: 9px;
-  margin-top:10px;
+  font-size: 11px;
+  margin-top: 4px;
+  line-height: 13.5px;
   font-weight: bold;
 }
 .received-message-block .attach-block{
@@ -518,45 +580,54 @@ background-color: #ecffdd;
   color: #2b1309;
   padding: 10px;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   font-family: 'Conv_proximanova-regular';
-  font-size: 9px;
-  margin-top:10px;
+  font-size: 11px;
+  line-height: 13px;
   font-weight: bold;
 }
 .ido-messager-footor {
   border-top: 1px solid #ddd;
   background-color: #f7f5f5;
-  padding-bottom: 5px;
   position: absolute;
   bottom: 0;
   width: 380px;
 }
-.ido-message-container{
+.ido-messager-footor .ido-message-container{
   display: flex;
   border: 1px solid #ddd;
   background-color: #ffffff;
-  margin-left: 10px!important;
-  margin-right: 10px!important;
+  margin-left: 5px;
   margin-top: 0;
-  margin-bottom: 10px;
+  width: 340px;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 4px;
 }
 .new-meassage-input{
   border: none;
   resize: none;
   height: 60px;
+  font-size: 9px;
 }
 .ido-messager-footor button{
-  color: #C55F55;
+  color: #614b50;
+}
+.ido-messager-footor button:hover{
+  color: #c55f55;
 }
 .ido-messager-footor button>i:before{
   padding: 0;
   font-size: 18px;
 }
+#ido-newmsg-sbmt{
+  padding:0;
+  border: none;
+}
 #ido-newmsg-sbmt i:before{
-  font-size: 30px;
-  color:#ddd;
+  font-size: 18px;
+  background: #fff;
 }
 .setting-menu-chat{
   display: none;
@@ -621,11 +692,11 @@ background-color: #ecffdd;
   line-height: 30px;
 }
 .right-section .active{
-  display:block;
+  display:none;
 }
 .right-section .welcome{
     height:100%;
-    display: none;
+    display: block;
 }
 .right-section .welcome>div{
   height:100%;
@@ -645,6 +716,7 @@ background-color: #ecffdd;
   justify-content: flex-start;
   border-bottom: 1px solid #eeee;
   padding-bottom: 5px;
+  padding-top: 2px;
 }
 .ido-new-chat .filter-block{
   display: flex;
@@ -653,6 +725,9 @@ background-color: #ecffdd;
   width: 33%;
   margin-left: 5px;
   margin-right: 5px;
+}
+.ido-new-chat .filter-block .chosen-single{
+  padding-left: 10px;
 }
 .ido-new-chat .filter-block .clear_filter{
   margin-left: 5px;
@@ -759,5 +834,30 @@ background-color: #ecffdd;
   margin-left: 6px;
   height: 40px;
   width: 40px;
+}
+.ido-messager-body .ido-chat-avatar .ido-videocall-image{
+  margin-left: 2px;
+}
+.ido-messager-footor .smile-btn{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.ido-messager-footor .smile-btn i{
+  font-style: normal;
+}
+.ido-messager-footor label {
+  margin-left: 26px;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+.message-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.file-btn{
+  width: 28px;
+  margin-right: 4px;
+  font-family: 'ido-chat';
 }
 /* End context menu */
