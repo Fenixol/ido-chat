@@ -869,3 +869,6 @@ background-color: #ecffdd;
   font-family: 'ido-chat';
 }
 /* End context menu */
+.ido-new-chat .mCSB_scrollTools {
+  width: 6px;
+}
