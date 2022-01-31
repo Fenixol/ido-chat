@@ -118,7 +118,7 @@ button.close {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.22), 0 4px 8px rgba(0, 0, 0, 0.31);
   white-space: pre;
   position: fixed;
-  background-image: url(/img/chat_icon_bottom.svg);
+  background-image: url(../img/chat_icon_bottom.svg);
 }
 .ido-new-chat-open .count-circle-badge{
   width: 16px;
@@ -163,7 +163,7 @@ button.close {
 .ido-new-chat-header .logo_block {
   width: 40px;
   height: 40px;
-  background: url(/../images/main/top_logo.png)no-repeat;
+  background: url(../images/main/top_logo.png)no-repeat;
   background-size: 40px 40px;
 }
 .ido-new-chat-header .title{
@@ -212,7 +212,7 @@ button.close {
   width: 14px;
   height: 14px;
   border: none;
-  background: url(/../images/svg/icon_input_search.svg) no-repeat center center;
+  background: url(../images/svg/icon_input_search.svg) no-repeat center center;
 }
 .ido-new-chat-body{
   display: flex;
