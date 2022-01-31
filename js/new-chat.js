@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   $('.setting-menu-chat .btn-cancel').click(function() {
       $(".setting-menu-chat").hide();
+      $('.settings-btn').parent().removeClass('active')
   });
 
   $('.settings-btn').click(function() {
@@ -151,11 +152,15 @@ $(document).ready(function() {
   function contextListener() {
 
     document.addEventListener( "contextmenu", function(e) {
-      console.log('contextmenu');
       taskItemInContext = clickInsideElement( e, taskItemClassName );
-      console.log(taskItemInContext);
-
-      if ( taskItemInContext ) {
+      taskItemInContext1 = clickInsideElement( e, 'attach-block' );
+      if(taskItemInContext1){
+        menu = document.querySelector("#chat-context-file-menu");
+        e.preventDefault();
+        toggleMenuOn();
+        positionMenu(e);
+      } else if ( taskItemInContext ) {
+        menu = document.querySelector("#chat-context-menu");
         e.preventDefault();
         toggleMenuOn();
         positionMenu(e);
@@ -172,8 +177,14 @@ $(document).ready(function() {
   function clickListener() {
     document.addEventListener( "click", function(e) {
       var clickeElIsLink = clickInsideElement( e, contextMenuLinkClassName );
-
-      if ( clickeElIsLink ) {
+      taskItemInContext1 = clickInsideElement( e, 'attach-block' );
+      if(taskItemInContext1){
+        menu = document.querySelector("#chat-context-file-menu");
+        e.preventDefault();
+        toggleMenuOn();
+        positionMenu(e);
+      }
+      else if ( clickeElIsLink ) {
         e.preventDefault();
         menuItemListener( clickeElIsLink );
       } else {

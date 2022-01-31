@@ -270,7 +270,7 @@ button.close {
 }
 .ido-new-chat-body .ido-chat-menu .dropdown-menu a{
   padding: 5px;
-  padding-left: 30px;
+  padding-left: 27px;
   text-align: left;
   width: 100%;
   color: #2b1309;
@@ -278,7 +278,7 @@ button.close {
 .ido-new-chat-body .ido-chat-menu .dropdown-menu ul{
   padding: 0;
 }
-.ido-new-chat-body .ido-chat-menu li {
+.ido-new-chat-body .ido-chat-menu li.contacts-tab {
   height: 40px;
 }
 .ido-new-chat-body .ido-chat-menu li:hover {
@@ -294,8 +294,9 @@ button.close {
 .ido-new-chat-body .ido-chat-menu .dropdown-menu ul>li>ul>li>a{
   padding-left: 50px;
 }
-.ido-new-chat-body .ido-chat-menu .dropdown-menu a:hover{
-  background-color: #f5f5f5;
+.ido-new-chat-body .ido-chat-menu .dropdown-menu li> a:hover,
+.ido-new-chat-body .ido-chat-menu .dropdown-menu li> label:hover {
+  background-color: #ecffdd;
 }
 .ido-new-chat-body .ido-chat-menu .dropdown-menu a.active:before{
   font-family: "FontAwesome";
@@ -313,10 +314,16 @@ button.close {
   margin: 0 auto;
   display: block;
   font-weight: normal;
+  width: 100%;
+  padding-left: 4px;
 }
 .ido-new-chat-body .ido-chat-menu .dropdown-menu .divider {
   width: 90%;
   margin: 0 auto;
+  height: 1px;
+}
+.ido-new-chat-body .ido-chat-menu .chats-dropdown-menu {
+
 }
 .ido-new-chat-body .ido-chat-menu a>i::before{
   padding: 0;
@@ -616,6 +623,7 @@ background-color: #ecffdd;
 }
 .ido-messager-footor button:hover{
   color: #c55f55;
+  text-decoration: none;
 }
 .ido-messager-footor button>i:before{
   padding: 0;
