@@ -48,10 +48,6 @@ $(document).ready(function() {
     $("#search-new-chat").val('');
   });
 
-  $('#home').mCustomScrollbar({
-    theme: 'dark',
-  });
-
 
   /* Functions for ido-context-menu */
 

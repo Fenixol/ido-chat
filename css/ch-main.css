@@ -200,6 +200,7 @@ button.close {
   display: block;
   background: white;
   box-shadow: none;
+  color: #2b1309;
 }
 .ido-new-chat .search-f .form-group {
   padding-left: 30px;
@@ -411,6 +412,13 @@ button.close {
 .ido-newchat-list li:last-child{
   padding-bottom: 5px;
 }
+.recent-chats-list{
+  padding-bottom: 10px;
+}
+.recent-chats-list li{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
 .ido-newchat-list li>a{
   display: block;
   margin-left: 10px;
@@ -423,6 +431,7 @@ background-color: #ecffdd;
 .ido-chat-avatar{
   color:#2b1309;
   font-family: 'open_sanssemibold';
+  position: relative;
 }
 .ido-chat-avatar .badge-newchat{
   display: flex;
@@ -430,9 +439,9 @@ background-color: #ecffdd;
   height: 14px;
   border-radius: 50%;
   border: solid 2px #ffffff;
-  position: relative;
-  right: 25px;
-  top: 30px;
+  position: absolute;
+  right: 9px;
+  top: 25px;
   background-color: #cdcdcd;
 }
 .active-user .badge-newchat {
@@ -447,6 +456,7 @@ background-color: #ecffdd;
   color:#C55F55;
   position: relative;
   top: -3px;
+  height: 12px;
 }
 .ido-date-chat{
   color:#afafaf;
@@ -485,7 +495,7 @@ background-color: #ecffdd;
   border-radius: 50%;
   border: solid 2px #ffffff;
   background-color: #cdcdcd;
-  margin-left: 2px;
+  margin-left: 4px;
 }
 .ido-new-chat .tab-pane{
   padding-top: 5px;
@@ -703,7 +713,7 @@ background-color: #ecffdd;
   display:none;
 }
 .right-section .welcome{
-    height:100%;
+    height:95%;
     display: block;
 }
 .right-section .welcome>div{
@@ -718,6 +728,8 @@ background-color: #ecffdd;
   width: 80px;
   height: 80px;
   margin: 0% auto;
+  position: relative;
+  top: -10px;
 }
 .ido-new-chat .filter-section{
   display: flex;
@@ -869,6 +881,33 @@ background-color: #ecffdd;
   font-family: 'ido-chat';
 }
 /* End context menu */
-.ido-new-chat .mCSB_scrollTools {
-  width: 6px;
+
+#home, .chosen-results{
+  scrollbar-color: #b9b1ae #ffffff;
+  scrollbar-width: thin;
 }
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #ffffff;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #b9b1ae;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b9b1ae;
+}
+.ido-new-chat-body .ido-chat-menu .chat-settings-dropdown .fa-circle::before{
+  color:#cdcdcd;
+}
+.ido-new-chat-body .ido-chat-menu .chat-settings-dropdown .fa-circle.online::before{
+  color:#077018;
+}
+
