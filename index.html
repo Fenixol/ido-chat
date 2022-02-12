@@ -1424,7 +1424,7 @@
   <div class="ido-new-chat-body">
       <div class="left-section">
           <div class="box">
-              <ul class="nav nav-tabs ido-chat-menu">
+              <ul class="nav nav-tabs ido-chat-menu new-inputs">
                   <li class="active">
                       <a data-toggle="tab" href="#home" id="chats-tab">
                           <div class="count-circle-badge">2</div>
@@ -1439,7 +1439,6 @@
                           <li >
                               <label>
                                   <input class="checkbox" type="checkbox" value="1" id="show_favorites">
-                                  <span class="checkbox-custom"></span>
                                   Show Favorites
                               </label>
                           </li>
@@ -2095,13 +2094,18 @@
                   </div>
                   <div id="menu1" class="tab-pane fade">
                       <div class="filter-section">
-                        <div class="filter-block">
+                        <div class="filter-block contacts">
                             <select id="contacts" class="chosen-style filter_field" name="conact" style="display: none;">
-                                <option value="">All contacts</option>
-                                <option value="">Our Company staff</option>
-                                <option value="">WOMI staff</option>
-                                <option value="">Customers</option>
-                                <option value="">Vendors</option>
+                                <optgroup label="All contacts">
+                                    <option value="">WOMI staff</option>
+                                    <option value="">Our Customers</option>
+                                    <option value="">Vendors</option>
+                                    <option value="">Venues</option>
+                                </optgroup>
+                                <optgroup label="Traveln agents">
+                                    <option value="">Venues` Customers</option>
+                                    <option value="">Travel agents` Customers</option>
+                                </optgroup>
                             </select>
                         </div>
                         <div class="filter-block">

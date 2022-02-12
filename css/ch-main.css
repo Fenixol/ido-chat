@@ -316,8 +316,15 @@ button.close {
   display: block;
   font-weight: normal;
   width: 100%;
-  padding-left: 4px;
+  padding-left: 28px;
 }
+.ido-new-chat-body .new-inputs input[type=checkbox],
+.ido-new-chat-body .new-inputs input[type=checkbox]:focus{
+  border: none; 
+  box-shadow: none;
+  margin-left: -18px;
+}
+
 .ido-new-chat-body .ido-chat-menu .dropdown-menu .divider {
   width: 90%;
   margin: 0 auto;
@@ -909,5 +916,21 @@ background-color: #ecffdd;
 }
 .ido-new-chat-body .ido-chat-menu .chat-settings-dropdown .fa-circle.online::before{
   color:#077018;
+}
+.ido-new-chat-body .filter-section .chosen-container .chosen-results {
+  padding: 0;
+  margin: 0;
+}
+.ido-new-chat-body .filter-block.contacts .chosen-container .chosen-results li.group-result {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal;
+  cursor: default;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.ido-new-chat-body .filter-block.contacts .chosen-container .chosen-drop {
+  width: 150px;
+  border-top: 1px solid #ddd;
 }
 
