@@ -48,6 +48,10 @@ $(document).ready(function() {
     $("#search-new-chat").val('');
   });
 
+  $(".check-link").click(function() {
+    $(this).toggleClass('check');
+  });
+
   $(document).mouseup(function (e) {
       let setting_menu_chat = $(".setting-menu-chat");
       if (setting_menu_chat.has(e.target).length === 0){

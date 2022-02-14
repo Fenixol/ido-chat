@@ -306,23 +306,14 @@ button.close {
   position: absolute;
   left: 12px;
 }
-.ido-new-chat-body .ido-chat-menu .dropdown-menu label{
-  padding: 5px 0px;
-  color: #2b1309;
-  font-family: "open_sansregular";
-  font-size: 10px;
-  width: 140px;
-  margin: 0 auto;
-  display: block;
-  font-weight: normal;
-  width: 100%;
-  padding-left: 28px;
-}
-.ido-new-chat-body .new-inputs input[type=checkbox],
-.ido-new-chat-body .new-inputs input[type=checkbox]:focus{
-  border: none; 
-  box-shadow: none;
-  margin-left: -18px;
+.ido-new-chat-body .ido-chat-menu .dropdown-menu a.check:before{
+  font-family: "dashicons";
+  content: "\f147";
+  color: #C55F55;
+  position: absolute;
+  left: 7px;
+  font-size: 18px;
+  bottom: 0px;
 }
 
 .ido-new-chat-body .ido-chat-menu .dropdown-menu .divider {
@@ -330,9 +321,7 @@ button.close {
   margin: 0 auto;
   height: 1px;
 }
-.ido-new-chat-body .ido-chat-menu .chats-dropdown-menu {
 
-}
 .ido-new-chat-body .ido-chat-menu a>i::before{
   padding: 0;
 }
