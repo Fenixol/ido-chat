@@ -543,7 +543,7 @@ background-color: #ecffdd;
 }
 .ido-messager-body{
   padding: 10px;
-  height: 55%;
+  height: 350px;
   overflow-y: auto;
 }
 .ido-messager-body .title{
@@ -599,6 +599,7 @@ background-color: #ecffdd;
   font-size: 11px;
   line-height: 13px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .ido-messager-footor {
   border-top: 1px solid #ddd;
