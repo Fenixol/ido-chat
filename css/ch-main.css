@@ -144,8 +144,8 @@ button.close {
   opacity: 1;
   background: #ffffff;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 2px;
+  right: 2px;
   z-index:9900;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -496,10 +496,11 @@ background-color: #ecffdd;
 .ido-new-chat .tab-pane{
   padding-top: 5px;
   overflow-y: auto;
-  height: 510px;
+  height: 505px;
 }
 .ido-new-chat #home{
   padding-top: 22px;
+  padding-bottom: 10px;
 }
 .ido-messager-heder{
   background-color:#f7f5f5;
@@ -888,7 +889,7 @@ background-color: #ecffdd;
 ::-webkit-scrollbar {
   width: 8px; /* ширина для вертикального скролла */
   height: 8px; /* высота для горизонтального скролла */
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 /* ползунок скроллбара */
